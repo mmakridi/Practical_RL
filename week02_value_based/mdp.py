@@ -199,7 +199,7 @@ class FrozenLakeEnv(MDP):
         states = [(i, j) for i in range(nrow) for j in range(ncol)]
         actions = ["left", "down", "right", "up"]
 
-        initial_state = states[np.array(desc == b'S').ravel().argmax()]
+        initial_state = states[np.array(desc == 'S').ravel().argmax()]
 
         def move(row, col, movement):
             if movement == 'left':
